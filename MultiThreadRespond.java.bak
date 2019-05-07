@@ -29,12 +29,13 @@ public class MultiThreadRespond implements Runnable{
     @Override
     public void run(){
         String  [] Word = {  "Avatar","Titanic","Jurassic World",
-		"The Avengers","Black Panther","Frozen,Beauty and the Beast","Incredibles",
-		"Iron Man","Minions","Aquaman",
+		"The Avengers","Black Panther","Harry Potter and the Deathly Hallows",
+		"Frozen,Beauty and the Beast","Incredibles","The Fate of the Furious",
+		"Iron Man","Minions","Aquaman","The Lord of the Rings","Transformers",
 		"Captain Marvel","Skyfall","The Dark Knight Rises","Toy Story",
 		"Pirates of the Caribbean","Despicable Me","Jurassic Park","Finding Dory",
 		"Star Wars","Alice in Wonderland","Zootopia","The Hobbit","The Dark Knight",
-		"The Lion King","The Jungle Book","Finding Nemo"};
+		"The Lion King","The Jungle Book","Finding Nemo","Harry Potter and the Order of the Phoenix"};
         String RandomWord;
         char[] SecretWord;
         String User = "";
