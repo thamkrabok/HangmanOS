@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class MultiThreadRespond implements Runnable{
+public class EchoThread implements Runnable{
 
     private ServerSocket server;
     private int port ;
@@ -16,7 +16,7 @@ public class MultiThreadRespond implements Runnable{
 
     private int LP = 5;
 
-    public MultiThreadRespond(int port){
+    public MultiThread(int port){
         this.port = port;
         try{
             server = new ServerSocket(port);
@@ -29,13 +29,12 @@ public class MultiThreadRespond implements Runnable{
     @Override
     public void run(){
         String  [] Word = {  "Avatar","Titanic","Jurassic World",
-		"The Avengers","Black Panther","Harry Potter and the Deathly Hallows",
-		"Frozen,Beauty and the Beast","Incredibles","The Fate of the Furious",
-		"Iron Man","Minions","Aquaman","The Lord of the Rings","Transformers",
+		"The Avengers","Black Panther","Frozen,Beauty and the Beast","Incredibles",
+		"Iron Man","Minions","Aquaman",
 		"Captain Marvel","Skyfall","The Dark Knight Rises","Toy Story",
 		"Pirates of the Caribbean","Despicable Me","Jurassic Park","Finding Dory",
 		"Star Wars","Alice in Wonderland","Zootopia","The Hobbit","The Dark Knight",
-		"The Lion King","The Jungle Book","Finding Nemo","Harry Potter and the Order of the Phoenix"};
+		"The Lion King","The Jungle Book","Finding Nemo"};
         String RandomWord;
         char[] SecretWord;
         String User = "";
