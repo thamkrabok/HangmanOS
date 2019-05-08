@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class MultiThreadRespond implements Runnable{
+public class Echothread implements Runnable{
 
     private ServerSocket server;
     private int port ;
@@ -16,7 +16,7 @@ public class MultiThreadRespond implements Runnable{
 
     private int LP = 5;
 
-    public MultiThreadRespond(int port){
+    public Echothread(int port){
         this.port = port;
         try{
             server = new ServerSocket(port);

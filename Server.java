@@ -38,12 +38,12 @@ public class Server {
                 String message = (String) ois.readObject();
                 System.out.println("Message Received: " + message);
                 Random rand = new Random();
-                int newPort = rand.nextInt(9000)+1000;
-                MultiThreadRespond echoThread = new MultiThreadRespond(newPort);
+                int Ports = rand.nextInt(9000)+1000;
+                Echothread echoThread = new Echothread(Ports);
                 thread = new Thread(echoThread);
                 thread.start();
                 ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-                oos.writeObject(""+newPort);
+                oos.writeObject(""+Ports);
 
                 ois.close();
                 oos.close();
