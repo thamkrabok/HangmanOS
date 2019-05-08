@@ -39,7 +39,7 @@ public class Server {
                 System.out.println("Message Received: " + message);
                 Random rand = new Random();
                 int newPort = rand.nextInt(9000)+1000;
-                EchoThread echoThread = new EchoThread(newPort);
+                MultiThreadRespond echoThread = new MultiThreadRespond(newPort);
                 thread = new Thread(echoThread);
                 thread.start();
                 ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
