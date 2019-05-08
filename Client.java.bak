@@ -8,15 +8,15 @@ import java.net.Socket;
 import java.util.Scanner;
 public class Client {
 
- //   private static int LP = 5;
+    private static int LP = 5;
     private static int InitPort = 6789;
-//	private static int IsWin = 0;
-//  private static int IsLose = 0;
-//	private static int MissCount = 0;
+	private static int IsWin = 0;
+    private static int IsLose = 0;
+	private static int MissCount = 0;
     private static String HOST = "127.0.0.1";
     private static Socket socket = null;
-//    private static String SecretWord = "";
-//    private static String Miss = "";
+    private static String SecretWord = "";
+    private static String Miss = "";
 	private static ObjectOutputStream SocketOutput = null;
     private static ObjectInputStream SocketInput = null;
 	private static String Human[] = {     "|=====\n" +

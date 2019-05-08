@@ -60,7 +60,42 @@ public class Client {
                     "|   \n",
     };
 
-  
+    private static void GetStatus(){
+        try {
+            SocketOutput.writeObject("GetStatus");
+            String input = (String) SocketInput.readObject();
+            String[] res = input.split("@");  
+
+           
+            SecretWord = res[0];
+            MissCount = Integer.parseInt(res[1]);
+            Miss = res[2];
+            IsWin = Integer.parseInt(res[3]);
+            IsLose = Integer.parseInt(res[4]);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    private static String GetAnswer(){
+        try {
+            SocketOutput.writeObject("GetAnswer");
+            String input = (String) SocketInput.readObject();
+            return input;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+
+
     public static void main( String[] args ) {
         Scanner keyboard;
 		
@@ -149,40 +184,7 @@ public class Client {
 
 
 
-	 private static void GetStatus(){
-        try {
-            SocketOutput.writeObject("GetStatus");
-            String input = (String) SocketInput.readObject();
-            String[] res = input.split("@");  
-
-           
-            SecretWord = res[0];
-            MissCount = Integer.parseInt(res[1]);
-            Miss = res[2];
-            IsWin = Integer.parseInt(res[3]);
-            IsLose = Integer.parseInt(res[4]);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private static String GetAnswer(){
-        try {
-            SocketOutput.writeObject("GetAnswer");
-            String input = (String) SocketInput.readObject();
-            return input;
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
-
+	
 
 
 
