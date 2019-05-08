@@ -72,7 +72,7 @@ public class Echothread implements Runnable{
                 while (running){
 
 
-                    System.out.print("\nSecret Word: ");
+                    System.out.print("\nHidden Word: ");
                     RespondSecretWord.delete(0,  RespondSecretWord.length());
                     for (int i = 0; i < RandomWord.length(); i++) {
                         System.out.print(SecretWord[i] + " ");
